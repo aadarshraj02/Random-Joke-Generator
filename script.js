@@ -7,9 +7,14 @@ const punch = document.getElementById("punch");
 btn.addEventListener("click", getJokes);
 
 function getJokes() {
+  btn.innerHTML = "Loading...";
   fetch(url)
     .then((response) => {
       return response.json();
     })
-    .then((data) => {});
+    .then((data) => {
+      joke.innerHTML = data.setup;
+      punch.innerHTML = data.punchline;
+      btn.innerHTML = "NextJoke";
+    });
 }
