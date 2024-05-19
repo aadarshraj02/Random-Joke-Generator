@@ -5,3 +5,11 @@ const joke = document.getElementById("jokes");
 const punch = document.getElementById("punch");
 
 btn.addEventListener("click", getJokes);
+
+function getJokes() {
+  fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {});
+}
