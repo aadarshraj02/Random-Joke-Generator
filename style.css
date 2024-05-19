@@ -11,3 +11,11 @@ body {
   align-items: center;
   height: 100vh;
 }
+
+.card {
+  background-color: aqua;
+  text-align: center;
+  height: auto;
+  width: 40vw;
+  padding: 2rem;
+}
